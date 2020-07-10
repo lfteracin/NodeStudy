@@ -6,7 +6,6 @@ const User = require('../models/User');
 const authConfig = require('../../config/auth');
 const nodemailer = require('nodemailer');
 const mailer = require('../../modules/mailer');
-const { getUnpackedSettings } = require('http2');
 
 const router = express.Router();
 
