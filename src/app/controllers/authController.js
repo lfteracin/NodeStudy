@@ -91,31 +91,20 @@ router.post('/forgot_password', async (req, res) => {
         });
         console.log(user, token, now);
 
-        const transporter = nodemailer.createTransport({
-            host: "smtp.mailtrap.io",
-            port: 2525,
-            auth: {
-                user: "3979feeefafcc8",
-                pass: "bef5757fb33d51"
-            }
-        });
-
-        const mailOptions = {
+        mailer.sendMail({
             to: email,
             from: 'luis.teracin@gmail.com',
             subject: 'Reset password request',
-            html: '<p>Você esqueceu sua senha? Não tem problema, utilize esse token: ' + token + '</p>'
-        };
-
-        transporter.sendMail(mailOptions, function(error, info){
-            if(error)
+            template: 'auth/forgotPassword',
+            context: {token},
+        }, (err) => {
+            if(err){
+                console.log(err);
                 return res.status(400).send({ error: 'Cannot send forgot password e-mail'});
-
-            return res.send();
+            }
+       
+            return res.send({ sucess: 'true'});
         })
-
-        mailer.sendMail();
-
     } catch (err) {
         console.log(err);
         res.status(400).send({
