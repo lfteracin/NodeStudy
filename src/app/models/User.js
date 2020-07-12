@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         select: false,
     },
+    enabled: {
+        type: Boolean,
+        default: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now,

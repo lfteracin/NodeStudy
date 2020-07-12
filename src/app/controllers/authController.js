@@ -54,6 +54,9 @@ router.post('/authenticate', async (req, res) => {
             error: 'User not found'
         });
 
+    if(!user.enabled)
+        return res.status(400).send({ error: 'User disable'});
+
     if (!await bcrypt.compare(password, user.password))
         return res.status(400).send({
             error: 'Wrong Password'

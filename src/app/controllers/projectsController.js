@@ -23,7 +23,15 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:projectId', async(req, res) => {
-    res.send({ user: req.userId });
+    try{
+        const project = await (await Project.findById(req.params.projectId));
+
+        return res.send({ project });
+    }
+    catch(err){
+        console.log(err);
+        res.status(400).send({ error: 'Error loading projects', message: err});
+    }
 });
 
 router.post('/', async(req, res) => {
@@ -44,7 +52,15 @@ router.put('/:projectId', async(req, res) => {
 });
 
 router.delete('/:projectId', async(req, res) => {
-    res.send({ user: req.userId });
+    try{
+        const project = await (await Project.findByIdAndRemove(req.params.projectId));
+
+        return res.send({ success: 'true' });
+    }
+    catch(err){
+        console.log(err);
+        res.status(400).send({ error: 'Error removing project', message: err});
+    }
 });
 
 module.exports = app => app.use('/projects', router);
