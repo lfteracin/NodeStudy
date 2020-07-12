@@ -1,4 +1,4 @@
-# NodeStudy
+# NodeStudy - Controle de Projetos
 Repo de estudos sobre NodeJS
 
 Criação de uma aplicação em NodeJS para criação e acompanhamento de projetos baseada na serie da RocketSeat(```rocketseat.com.br```) no Youtube: Série API NodeJS(```https://www.youtube.com/playlist?list=PL85ITvJ7FLoiXVwHXeOsOuVppGbBzo2dp```)
