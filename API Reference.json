@@ -1,0 +1,381 @@
+{
+	"_type": "export",
+	"__export_format": 4,
+	"__export_date": "2020-07-13T03:46:36.720Z",
+	"__export_source": "insomnia.desktop.app:v2020.3.3",
+	"resources": [
+		{
+			"_id": "req_c3584a9525de4fc1a53d0488e8ddb463",
+			"authentication": {
+				"token": "{{ token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"title\": \"Meu projeto em Node - Task dentro do projeto\",\n\t\"description\": \"Projeto para criação de uma API para teste de aprendizado\",\n\t\"tasks\": [\n\t\t{\n\t\t\t\"title\": \"Análise de documentação\",\n\t\t\t\"assignedTo\": \"5f052f29d60bf239a433753f\"\n\t\t},\n\t\t{\n\t\t\t\"title\": \"Estimativa de desenvolvimentosdasdasd\",\n\t\t\t\"assignedTo\": \"5f052f29d60bf239a433753f\"\n\t\t}\n\t]\n}"
+			},
+			"created": 1594611065049,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6dfb973a42434db88f8cba638d5ff621",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594611065049,
+			"method": "PUT",
+			"modified": 1594611455461,
+			"name": "Update Project",
+			"parameters": [],
+			"parentId": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlprojects }}/5f0bd60a350fdb325cecefe5",
+			"_type": "request"
+		},
+		{
+			"_id": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"created": 1594530825713,
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1594530825713,
+			"modified": 1594530825713,
+			"name": "Projects",
+			"parentId": "fld_e21629b0a8324113b53b46fdc5778af4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e21629b0a8324113b53b46fdc5778af4",
+			"created": 1594523119153,
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1594523119153,
+			"modified": 1594523119153,
+			"name": "NodeSerie",
+			"parentId": "wrk_92ac18fcfb274c3692f3cdc679a9ebd1",
+			"_type": "request_group"
+		},
+		{
+			"_id": "wrk_92ac18fcfb274c3692f3cdc679a9ebd1",
+			"created": 1594356267924,
+			"description": "",
+			"modified": 1594356267924,
+			"name": "Insomnia",
+			"parentId": null,
+			"scope": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "req_519a9c883f8d47d49f8b6ce5953d6377",
+			"authentication": {
+				"token": "{{ token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"title\": \"Meu projeto em Node - Task dentro do projeto\",\n\t\"description\": \"Projeto para criação de uma API para teste de aprendizado\",\n\t\"tasks\": [\n\t\t{\n\t\t\t\"title\": \"Análise de documentação\",\n\t\t\t\"assignedTo\": \"5f052f29d60bf239a433753f\"\n\t\t},\n\t\t{\n\t\t\t\"title\": \"Estimativa de desenvolvimento\",\n\t\t\t\"assignedTo\": \"5f052f29d60bf239a433753f\"\n\t\t}\n\t]\n}"
+			},
+			"created": 1594530919418,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d9d1579321df446d87fd0ba69d47e663",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594534027396,
+			"method": "POST",
+			"modified": 1594610372818,
+			"name": "Create Project",
+			"parameters": [],
+			"parentId": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlprojects }}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f2421a13038a498e8cee2380885cbfa4",
+			"authentication": {
+				"token": "{{ token }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1594534027346,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1594534027346,
+			"method": "GET",
+			"modified": 1594536373615,
+			"name": "List all projects",
+			"parameters": [],
+			"parentId": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlprojects }}/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_06c9ab9a4e2642c19b6a118f6c05752b",
+			"authentication": {
+				"token": "{{ token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1594535990920,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5c25c2e4a91a4fbaa5fcd22668fd79ae",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594532473382,
+			"method": "GET",
+			"modified": 1594536399024,
+			"name": "Show Project by ID",
+			"parameters": [],
+			"parentId": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlprojects }}/projects/5f0aa39a2ab02b1a5cb6ba8c",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b570e956f04843f9b75f17bd2b7be4fa",
+			"authentication": {
+				"token": "{{ token }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1594536248027,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1594532473332,
+			"method": "DELETE",
+			"modified": 1594609935633,
+			"name": "Remove Project",
+			"parameters": [],
+			"parentId": "fld_93ea4344e34a4a01bc4d5826d12b3dd7",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlprojects }}/5f0bd034de45244b489201d5",
+			"_type": "request"
+		},
+		{
+			"_id": "req_8f776ac02c3a48dd82b769c240e6605f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"name\": \"Seu nome aqui\",\n    \"email\": \"seu email aqui\",\n    \"password\": \"sua senha aqui\",\n\t\t\"enabled\": false\n}"
+			},
+			"created": 1594523117510,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_7596ab97c4484a99a10375b4d74d446c",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594526949556,
+			"method": "POST",
+			"modified": 1594611851593,
+			"name": "Register Users",
+			"parameters": [],
+			"parentId": "fld_a5d0c8b9ad52466eb6dc4183e8185c73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlUsers }}/register",
+			"_type": "request"
+		},
+		{
+			"_id": "fld_a5d0c8b9ad52466eb6dc4183e8185c73",
+			"created": 1594530781479,
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1594530781479,
+			"modified": 1594530781479,
+			"name": "Users",
+			"parentId": "fld_e21629b0a8324113b53b46fdc5778af4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_223a24ab119f49a7bb9916702d863602",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"email\": \"seu email aqui\",\n    \"password\": \"sua senha aqui\"\n}"
+			},
+			"created": 1594523117519,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5a2aa2ff470f4275ada12e1bfa1cc148",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594526949549.75,
+			"method": "POST",
+			"modified": 1594611878481,
+			"name": "Authenticate",
+			"parameters": [],
+			"parentId": "fld_a5d0c8b9ad52466eb6dc4183e8185c73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlUsers }}/authenticate",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a35b805cf09f4ae0990c20fac81d3fd2",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"email\": \"seu email aqui\"\n}"
+			},
+			"created": 1594523117501,
+			"description": "Send your e-mail information to receive a token to reset your password",
+			"headers": [
+				{
+					"id": "pair_c2ecc50e59264cc382a493b9c7282036",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594526949546.625,
+			"method": "POST",
+			"modified": 1594611923131,
+			"name": "Forgot Password",
+			"parameters": [],
+			"parentId": "fld_a5d0c8b9ad52466eb6dc4183e8185c73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlUsers }}/auth/forgot_password",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f231c882783b488fb2c79e1a39bffdf5",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"email\": \"seu email aqui\",\n    \"token\": \"o token que vc recebeu no mailtrap\",\n    \"password\": \"sua senha nova\"\n}"
+			},
+			"created": 1594523117489,
+			"description": "With the token received on forgot password request, send your e-mail, the token and your new password to reset this one.",
+			"headers": [
+				{
+					"id": "pair_f33faccd6450417a99cc6e8b00e0ec6e",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1594526949543.5,
+			"method": "POST",
+			"modified": 1594611911502,
+			"name": "Reset Password",
+			"parameters": [],
+			"parentId": "fld_a5d0c8b9ad52466eb6dc4183e8185c73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingFollowRedirects": "global",
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_urlUsers }}/auth/reset_password",
+			"_type": "request"
+		},
+		{
+			"_id": "env_840813aecf6b06b9c954dab1e4824cdb80964bb0",
+			"color": null,
+			"created": 1594356267983,
+			"data": {
+				"base_urlUsers": "http://localhost:3000/auth",
+				"base_urlprojects": "http://localhost:3000/projects",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMDUyZjI5ZDYwYmYyMzlhNDMzNzUzZiIsImlhdCI6MTU5NDUzMjQ4NSwiZXhwIjoxNTk0NjE4ODg1fQ.pIg_rcM9_gyrE_pbW7_n1-yFEwFG6sgSnFFqNUwO6Xc"
+			},
+			"dataPropertyOrder": {
+				"&": [
+					"base_urlprojects",
+					"base_urlUsers",
+					"token"
+				]
+			},
+			"isPrivate": false,
+			"metaSortKey": 1594356267983,
+			"modified": 1594536306061,
+			"name": "Base Environment",
+			"parentId": "wrk_92ac18fcfb274c3692f3cdc679a9ebd1",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_840813aecf6b06b9c954dab1e4824cdb80964bb0",
+			"cookies": [],
+			"created": 1594356267986,
+			"modified": 1594356267986,
+			"name": "Default Jar",
+			"parentId": "wrk_92ac18fcfb274c3692f3cdc679a9ebd1",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "spc_4b5b37fd4d35494bad2521325de8cd78",
+			"contentType": "yaml",
+			"contents": "",
+			"created": 1594356267925,
+			"fileName": "Insomnia",
+			"modified": 1594356267925,
+			"parentId": "wrk_92ac18fcfb274c3692f3cdc679a9ebd1",
+			"_type": "api_spec"
+		}
+	]
+}
